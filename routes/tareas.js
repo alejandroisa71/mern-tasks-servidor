@@ -10,6 +10,7 @@ router.post(
   "/",
   auth,
   [check("nombre", "El Nombre es Obligatorio").not().isEmpty()],
+  [check("proyecto", "El Proyecto es Obligatorio").not().isEmpty()],
   tareaController.crearTarea
 );
 
