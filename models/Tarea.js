@@ -11,7 +11,7 @@ const TareaSchema = mongoose.Schema({
     default: false,
   },
   creado: {
-    type: Date(),
+    type: Date,
     default: Date.now(),
   },
   proyecto: {
