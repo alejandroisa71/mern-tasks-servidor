@@ -16,12 +16,16 @@ router.post(
 // Obtener todos lo proyectos
 router.get("/", auth, proyectoController.obtenerProyectos);
 
-//Actualizar proyecto vi ID
+//Actualizar proyecto via ID
 router.put(
   "/:id",
   auth,
   [check("nombre", "El nombre del proyecto es obligatorio").not().isEmpty()],
   proyectoController.actualizarProyecto
 );
+
+// Eliminar un Proyecto
+
+router.delete("/:id", auth, proyectoController.eliminarProyecto);
 
 module.exports = router;
