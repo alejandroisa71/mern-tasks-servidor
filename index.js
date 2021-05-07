@@ -14,7 +14,7 @@ app.use(cors());
 // HaHabilitar express.json
 app.use(express.json({ extended: true }));
 
-//puerto de la app
+//puerto de la app - se cambia para producion PORT por port
 const port = process.env.port || 4000;
 
 // Importar Rutas
